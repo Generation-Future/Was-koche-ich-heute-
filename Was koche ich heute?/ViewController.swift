@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         
      
         //Shufflen der Array-Einträge (zufällig)
-        let shuffledMeal = currentMeal.shuffled()
+        var shuffledMeal = currentMeal.shuffled()
      
        
         //Eintragen des jeweils ersten shuffledMeal Eintrags in neues Array zum Vergleichen
@@ -45,13 +45,13 @@ class ViewController: UIViewController {
         
        
         //Vergleich von zwei aufeinanderfolgenden Einträgen in shuffledMeal auf dessen erster Stelle
-        if (currentNumber[0] == currentNumber[1]) {
+        while (currentNumber[0] == currentNumber[1]) {
             
             
-
+            shuffledMeal = currentMeal.shuffled()
             
-            //Setzt den Text nicht auf den ersten, sondern auf einen anderen Eintrag von shuffledMeal
-             foodLabel.text = "\(foodArray[shuffledMeal[1]])"
+          currentNumber[zaehler] = shuffledMeal[0]
+             
         }
         
         
