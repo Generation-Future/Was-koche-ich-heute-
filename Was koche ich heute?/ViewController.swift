@@ -28,6 +28,17 @@ class ViewController: UIViewController {
     }
 
     
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            
+            
+            suggestionButtonHandler(UIButton())
+            
+        }
+    }
+    
+    
+    
     @IBAction func suggestionButtonHandler(_ sender: UIButton) {
    
     
